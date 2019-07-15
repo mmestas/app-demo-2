@@ -1,0 +1,36 @@
+<div style="
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    max-width: 1200px;
+    background: #ffffffb0;
+    min-height: 36px;
+    padding: 8px;
+    border: 1px solid #eaeaea;
+    margin: auto;
+    " data-ng-controller="impersonationCtrl">
+    <!-- <div > -->
+      <div class="text-right">
+        <div class="autcompleteWrapper" style="display:inline-block;" data-ng-if="!userInfo.isImpersonateSession">
+          <input data-ng-model="searchFields.input" data-ng-change="getUsersForAutocomplete(searchFields.input)" ng-placeholder="autocompleteField" data-ng-class="{'darkInputText': autocompleteSelected}"></input>
+          <div class="autocompleteDropdown text-left" data-ng-class="{'showDropdown': userImpersonationDropdown && showAutocompleteDropdown}">
+              <ul>
+                <!-- <li data-ng-repeat="result in patientSearchDropdown" data-ng-click="getCasesBySearch(result)"> -->
+                  <li data-ng-repeat="result in userImpersonationDropdown track by $index" data-ng-click="selectUserToImpersonate(result)">
+                      {{result.firstName}} {{result.lastName}}
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <div  style="display:inline-block; margin-right:7px;" data-ng-if="userInfo.isImpersonateSession">
+          You are impersonating {{userInfo.name}}
+        </div>
+
+
+          <!-- <button class="btn btn-outline-secondary btn-lg" data-ng-click="clearSearch(searchFields)">Clear</button> -->
+          <button class="btn btn-warning" data-ng-click="impersonateUser()"  data-ng-if="!userInfo.isImpersonateSession">Impersonate</button>
+          <button class="btn btn-warning" data-ng-click="restoreSession()" data-ng-if="userInfo.isImpersonateSession">Restore</button>
+        </div>
+    <!-- </div> -->
+  </div>

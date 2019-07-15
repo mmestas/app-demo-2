@@ -1,0 +1,95 @@
+<div data-ng-controller="paymentFormCtrl">
+  <div class="row">
+    <div class="col col-md-12">
+      <!-- On Demand Method Types -->
+      <!-- Credit Card -->
+      <div class="" data-ng-if="paymentData.allowCreditCard">
+        <input class="" type="radio" name="onDemandMethodTypeId" id="creditCard" value="1" data-ng-model="paymentFormFields.onDemandMethodTypeId" data-ng-value="1">
+        <label class="form-check-label" for="creditCard">
+          Credit Card
+        </label>
+      </div>
+      <div class="" data-ng-if="paymentData.allowCreditCard && paymentData.cardList.length > 0">
+        <input class="" type="radio" name="onDemandMethodTypeId" id="creditCard4" value="4" data-ng-model="paymentFormFields.onDemandMethodTypeId" data-ng-value="4" data-ng-click="paymentFormFields.cardOndemandmethodid = paymentData.account_AutoPayId">
+        <label class="form-check-label" for="creditCard4">
+          Pay with Credit Card on File
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credit Cards On File -->
+  <div class="row" data-ng-if="paymentFormFields.onDemandMethodTypeId == 4">
+    <div class="col col-md-12">
+      <div class="form-group">
+        <label for="cardOndemandmethodid">Saved Card</label>
+        <select id="cardOndemandmethodid" class="form-control" name="cardOndemandmethodid" data-ng-model="paymentFormFields.cardOndemandmethodid" data-ng-options="cc.payOptionId as cc.name + '  expiration date:  ' + (cc.expirationDate | date) for cc in paymentData.cardList">
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credit Card Input Fields -->
+  <div  data-ng-if="paymentFormFields.onDemandMethodTypeId == 1">
+    <div class="row">
+      <div class="col col-md-5">
+        <div class="form-group">
+          <label for="cardType">Card Type</label>
+          <select id="cardType" class="form-control" name="cardType" data-ng-model="paymentFormFields.cardType">
+            <option value="">Select One</option>
+            <option id="cardTypeVisa" value="visa" data-ng-if="paymentData.ORDERALLOWVISA">Visa</option>
+            <option id="cardTypeMC" value="mastercard" data-ng-if="paymentData.ORDERALLOWMC">MasterCard</option>
+            <option id="cardTypeAmex" value="amex" data-ng-if="paymentData.ORDERALLOWAMEX">American Express</option>
+            <option id="cardTypeDiscover" value="discover" data-ng-if="paymentData.ORDERALLOWDISCOVER">Discover</option>
+          </select>
+        </div>
+      </div>
+      <div class="col col-md-5">
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" class="form-control" id="cardNumber" name="CreditCardNumber" data-ng-model="paymentFormFields.CreditCardNumber">
+        </div>
+      </div>
+      <div class="col col-md-2">
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" class="form-control" id="cvv" name="SecurityCode" data-ng-model="paymentFormFields.SecurityCode">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-3">
+        <div class="form-group">
+          <label for="cardExpirationMonth">MM</label>
+          <select id="cardExpirationMonth" class="form-control" name="cardExpirationMonth" data-ng-model="paymentFormFields.cardExpirationMonth" data-ng-options="mm.value as mm.name for mm in ccMonths">
+          </select>
+        </div>
+      </div>
+      <div class="col col-md-3">
+        <div class="form-group">
+          <label for="cardExpirationYear">YYYY</label>
+          <select id="cardExpirationYear" class="form-control" name="cardExpirationYear" data-ng-model="paymentFormFields.cardExpirationYear" data-ng-options="yy as yy for yy in ccYears">
+          </select>
+        </div>
+      </div>
+      <div class="col col-md-6">
+        <div class="form-group">
+          <label for="cardName">Card Holder Name</label>
+          <input type="text" class="form-control" id="cardName" name="cardName" data-ng-model="paymentFormFields.cardName">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <input type="CheckBox" id="saveCardToAccount" name="saveCardToAccount" value="1" data-ng-true-value="1" ng-false-value="0" checked="checked" data-ng-model="paymentFormFields.saveCardToAccount">
+        <label for="saveCardToAccount" class="checkbox">Save card to account</label>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>

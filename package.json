@@ -1,0 +1,20 @@
+{
+  "name": "appDemo2app",
+  "version": "2.0.0",
+  "description": "An application for appDemo2",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "s3Bucket",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-rev-easy": "^1.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch-sass": "^1.4.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "npm": "^6.8.0",
+    "sass": "^1.22.4"
+  }
+}

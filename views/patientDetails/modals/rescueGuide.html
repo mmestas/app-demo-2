@@ -1,0 +1,36 @@
+<div class="modal">
+ <div class="modal-dialog modal-md modalCentered">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">Rescue Guide Terms & Conditions</h4>
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <div class="row">
+         <div class="col">
+           <p>
+           New patients who start in any appDemo2 DNA and appDemo2 mRNA systems, are eligible to receive one appDemo2 Guide for no additional cost. Some providers may wish to prescribe this appDemo2 Guide immediately following the patient’s initial visit and before a formal treatment plan and appDemo2 DNA or appDemo2 mRNA prescription has been completed.
+           </p>
+           <p>
+              In ordering a appDemo2 Guide at this time, your account credit card on file will immediately be processed as a new appDemo2 Guide System case start. If a corresponding appDemo2 DNA or appDemo2 mRNA system is prescribed on appDemo2 Cloud within 30 days of that order for the same patient, the initial fee for the initial appDemo2 Guide will be credited on the invoice. appDemo2 DNA and appDemo2 mRNA RX’s placed 30 days after the appDemo2 Guide was ordered, will only be eligible for a credit that equals the fee of a mid-treatment appDemo2 Guide. If you send in an Rx outside of the Cloud system there may be a delay in applying the credit to your account.
+            <p>
+              If you are creating a appDemo2 Guide system prescription for a patient that is currently in treatment but not in the appDemo2 Cloud system you need to cancel this "Rescue Guide" prescription and select "Create New Rx" then make sure you select "Mid-treatment" in the appliance construction section in order to get the mid-treatment price.
+            </p>
+            <p>
+                Example: A appDemo2 Guide is ordered today for patient VIV-00001 through the “Rescue Appliance” function for new patients and the provider is billed $249. 18 days later, the provider prescribes and submits an Rx for a appDemo2 Dual DNA System for the same patient, VIV-00001. The provider will then receive a new invoice for the appDemo2 Dual DNA System, with a corresponding credit for the $249 “Rescue Appliance”.
+            </p>
+           <p>
+             <input type="checkbox" id="iAgree" name="iAgree" data-ng-model="checkbox.iAgree">
+             <label for="iAgree" class="checkbox">I agree.</label>
+           </p>
+         </div>
+       </div>
+
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel Order</button>
+       <button type="button" class="btn btn-primary" data-ng-click="continueToRescueGuideOrder()" data-ng-disabled="!checkbox.iAgree">Continue to Order</button>
+     </div>
+   </div>
+ </div>
+</div>

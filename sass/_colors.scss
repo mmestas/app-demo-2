@@ -1,0 +1,54 @@
+// Original colors:
+// $appDemo2Orange: #ffa400;
+// $appDemo2Green: #95d600;
+// $appDemo2Teal: #1ccfc9;
+// $appDemo2TealOutline: #49c1c2;
+
+// New colors:
+//     color: #abc27d;
+//     color: #8faaa0;
+//     color: #e4bf44;
+//     color: #63655e;
+
+
+//
+$appDemo2Orange: #e4bf44;
+$appDemo2DarkOrange: darken($appDemo2Orange, 10);
+$appDemo2OrangeHover: lighten($appDemo2Orange, 24);
+
+$appDemo2Green: #abc27d;
+$appDemo2GreenHover: lighten($appDemo2Green, 20%);
+$appDemo2DarkGreen: darken($appDemo2Green, 10%);
+$appDemo2HazyGreen: #b2cc77;
+
+
+$appDemo2Teal: #8faaa0;
+$appDemo2TealHover: lighten($appDemo2Teal, 20%);
+$appDemo2DarkTeal: darken($appDemo2Teal, 20%);
+
+$appDemo2Red: #ea5353;
+$appDemo2RedHover: lighten($appDemo2Red, 30%);
+$appDemo2DarkRed: darken($appDemo2Red, 10%);
+
+$appDemo2Text: #212529;
+$appDemo2Grey: #535353;
+$appDemo2MedGrey: #64656A;
+$appDemo2MedLtGrey: #868686;
+$appDemo2LtGrey: #a9a9ab;
+$appDemo2BorderGrey: #bbbbbb;
+$appDemo2BorderGrey2: #c3c3c3;
+$appDemo2BorderGrey3: #cccccc;
+$appDemo2Border: #eaeaea;
+$appDemo2OffWhite: #f1f1f1;
+$appDemo2White: #ffffff;
+
+$appDemo2Blue: #23abe2;
+$appDemo2BlueHover: lighten($appDemo2Blue, 30%);
+$appDemo2DarkBlue: darken($appDemo2Blue, 10%);
+// $appDemo2BackgroundBlue: #7190af;
+$appDemo2BackgroundBlue: #8e9faf;
+
+$appDemo2DkMauve: #9c27b0;
+$appDemo2DkMauveHover: lighten($appDemo2DkMauve, 30%);
+$appDemo2Fucshia: #f74783;
+$appDemo2FucshiaHover: lighten($appDemo2Fucshia, 30%);

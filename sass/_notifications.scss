@@ -1,0 +1,55 @@
+.errorMsg {text-align: center; padding-bottom: 15px;}
+.warningMsg {color: $appDemo2Orange;}
+
+.activelyEditing {color:$appDemo2Green;}
+
+// TOASTS
+md-toast {
+  .md-toast-content {color: $appDemo2Grey; background-color: $appDemo2White;border: 2px solid $appDemo2Grey;}
+  &.md-default-theme {
+    .md-toast-content {border-color: $appDemo2White;}
+  }
+  &.md-danger-toast-theme {
+    .md-toast-content {border-color: $appDemo2Red;}
+  }
+  &.md-warning-toast-theme {
+    .md-toast-content {border-color: $appDemo2Orange;}
+  }
+  &.md-primary-toast-theme {
+    .md-toast-content {border-color: $appDemo2Teal;}
+  }
+  &.md-success-toast-theme {
+    .md-toast-content {border-color: $appDemo2Green;}
+  }
+  .md-toast-text {font-weight: 300;}
+  &.width_100 {
+    .md-toast-content {max-width:100%;}
+  }
+}
+
+// Bootstrap Alerts
+.alert-primary {
+  color: $appDemo2DarkTeal;
+  background-color: $appDemo2TealHover;
+  border-color: darken($appDemo2Teal, 2%);
+}
+.alert-success {
+  color: $appDemo2DarkGreen;
+  background-color: $appDemo2GreenHover;
+  border-color: darken($appDemo2Green, 2%);
+}
+.alert-danger {
+  color: $appDemo2DarkRed;
+  background-color: $appDemo2RedHover;
+  border-color: darken($appDemo2Red, 2%);
+}
+.alert-warning {
+    color: $appDemo2DarkOrange;
+    background-color: lighten($appDemo2Orange, 35%);
+    border-color: darken($appDemo2Orange, 2%);
+}
+.alert-info {
+    color: $appDemo2DarkBlue;
+    background-color: $appDemo2BlueHover;
+    border-color: darken($appDemo2Blue, 2%);
+}

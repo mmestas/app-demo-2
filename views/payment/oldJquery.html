@@ -1,0 +1,291 @@
+<div class="gp-ecommerceWrapper" ng-show="appInfo.item &amp;&amp; (appInfo.item.UnitPrice > 0)" aria-hidden="false" style="">
+        <form id="js-ecommercePayments" name="ecommercePayments" class="ng-pristine ng-valid"><script type="text/javascript">
+(function () {
+    "use strict";
+    // last radio selected
+    var lastPayDetail="";
+    // detect if must wait for ready, or if ajaxed and html already in dom
+    var isReady = jQuery(".abOnlinePaymentFields").length;
+    if (isReady) {
+        setupForm();
+    } else {
+        jQuery( document ).ready(function(){
+            setupForm();
+        })
+    }
+    function setupForm () {
+        // setup pay button handler
+        //console.log("setupForm");
+        jQuery("body").on("change",".abPayButton input",function () {
+            if (jQuery(lastPayDetail).length) lastPayDetail.hide();
+            showPayDetail(jQuery("input[name=onDemandMethodTypeId]:checked").val());
+        });
+        // initialize payMethod if this is repainting a submitted form
+        var onDemandMethodTypeIdInit = parseInt(jQuery("input[name=onDemandMethodTypeIdInit]").val());
+        if (!isNaN(onDemandMethodTypeIdInit)) {
+            // show the payDetail they previously submitted
+            showPayDetail (onDemandMethodTypeIdInit);
+        } else {
+            // initialize the first button found - causes a change event to display details
+            if (jQuery("#abPayButtonCardOnline").length) {
+                jQuery("#abPayButtonCardOnline input").prop("checked", true);
+                showPayDetail (1);
+            } else if (jQuery("#abPayDetailCardAccount").length) {
+                jQuery("#abPayDetailCardAccount input").prop("checked", true);
+                showPayDetail (2);
+            } else if (jQuery("#abPayDetailECheckOnline").length) {
+                jQuery("#abPayDetailECheckOnline input").prop("checked", true);
+                showPayDetail (3);
+            } else if (jQuery("#abPayDetailECheckAccount").length) {
+                jQuery("#abPayDetailECheckAccount input").prop("checked", true);
+                showPayDetail (4);
+            } else if (jQuery("#abPayDetailBill").length) {
+                jQuery("#abPayDetailBill input").prop("checked", true);
+                showPayDetail (5);
+            } else if (jQuery("#abPayDetailPayPal").length) {
+                jQuery("#abPayDetailPayPal input").prop("checked", true);
+                showPayDetail (6);
+            }
+        }
+	}
+    function showPayDetail (payDetailId) {
+        //alert("showPayDetail "+payDetailId);
+        //console.log("showPayDetail");
+        jQuery(".abPayButton input[value="+payDetailId+"]").prop("checked",true);
+        switch (parseInt(payDetailId)) {
+        case 1:
+            lastPayDetail = jQuery(".abPayDetailCardOnline");
+            break;
+        case 2:
+            lastPayDetail = jQuery(".abPayDetailECheckOnline");
+            break;
+        case 3:
+            lastPayDetail = jQuery(".abPayDetailBill");
+            break;
+        case 4:
+            lastPayDetail = jQuery(".abPayDetailCardAccount");
+            break;
+        case 5:
+            lastPayDetail = jQuery(".abPayDetailECheckAccount");
+            break;
+        case 6:
+            lastPayDetail = jQuery(".abPayDetailPayPal");
+            break;
+        }
+        if (jQuery(lastPayDetail).length) lastPayDetail.show();
+		// Create and submit PayPal form
+		jQuery('#abPayButtonPayPalSubmit').click(function(event){
+			//alert("abPayButtonPayPalSubmit");
+			event.preventDefault();
+			var newForm = jQuery('&lt;form&gt;', {'action': jQuery("input[name=payPalAction]").val(),'target': '_top'}
+			).append(jQuery('&lt;input&gt;', { 'name': 'cmd', 'value': jQuery("input[name=cmd]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'business', 'value': jQuery("input[name=business]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'item_name', 'value': jQuery("input[name=item_name]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'currency_code', 'value': jQuery("input[name=currency_code]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'amount', 'value': jQuery("input[name=amount]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'return', 'value': jQuery("input[name=return]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'notify_url', 'value': jQuery("input[name=notify_url]").val(), 'type': 'hidden'})
+			).append(jQuery('&lt;input&gt;', { 'name': 'shopping_url', 'value': jQuery("input[name=shopping_url]").val(), 'type': 'hidden'})
+			);
+			//alert( newForm.html());
+			console.log( newForm.html());
+			newForm.appendTo("body").submit();
+		});
+	}
+})();
+</script>
+<style>
+/*
+* generic
+*/
+.abOnlinePaymentFields .abPayButton div {
+    margin: 5px 0 0 0;
+}
+.abOnlinePaymentFields .abPayDetail {
+    margin: 10px 0 0 0;
+}
+.abOnlinePaymentFields ul {
+    margin: 0;
+    /* margin: 20px 0 0 0;  */
+    padding 0 0 0 25px;
+    list-style: none outside none;
+    padding: 0;
+}
+.abOnlinePaymentFields li {
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+.abOnlinePaymentFields li.labelRow {
+    margin: 10px 0 0 0;
+}
+.abOnlinePaymentFields label {
+    font-weight: bold;
+    display: inline-block;
+    width: 170px;
+    padding: 5px;
+    margin: 0 20px 0 0;
+}
+.abOnlinePaymentFields label#labelCardCVV {
+    width: 50px;
+}
+.abOnlinePaymentFields label span  {
+    font-weight: normal;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 0 0 5px;
+    text-style: italcs;
+}
+.abOnlinePaymentFields label.extended {
+    width: 400px;
+}
+.abOnlinePaymentFields input[type="text"],
+.abOnlinePaymentFields input[type="password"],
+.abOnlinePaymentFields select {
+    padding: 5px;
+    margin: 0 20px 0 0;
+    border: 1px solid #DDDDDD;
+}
+.abOnlinePaymentFields input[type="text"],
+.abOnlinePaymentFields input[type="password"],
+.abOnlinePaymentFields select {
+    width: 170px;
+}
+.abOnlinePaymentFields #cardCVV {
+    width: 65px;
+}
+.abOnlinePaymentFields select { padding: 5px; margin: 0 20px 0 0; border: 1px solid #DDDDDD; width: 180px;}
+.abOnlinePaymentFields select.shorter { padding: 5px; margin: 0 20px 0 0; border: 1px solid #DDDDDD; width: 78px;}
+.abOnlinePaymentFields input.file { padding: 5px; margin: 0 10px 10px 0; border: 1px solid #DDDDDD; width: 300px; }
+.abOnlinePaymentFields li.memberTypeDescription {margin: 0 0 15px 56px}
+.abOnlinePaymentFields input.inputShort { margin: 0 5px 10px 0; width: 55px; }
+.abOnlinePaymentFields label span.filedRequired { font-weight: bold; display: inline-block; margin: 0 0 0 5px; color: #c02020; font-size: 100%; }
+.abOnlinePaymentFields li#sslSeal {
+    width: 250px;
+    float: right;
+    height: 100px;
+    /* border: 1px solid; */
+    margin-top: -50px;
+}
+.abOnlinePaymentFields .abCreditCard {
+    margin: 20px 0 0 0;
+}
+.abOnlinePaymentFields .abEcheck {
+    margin: 20px 0 0 0;
+}
+</style>
+<div class="abOnlinePaymentFields">
+    <fieldset class="afwFieldSet">
+        <legend>Payment</legend>
+        <div class="abPayButton">
+            <div id="abPayButtonCardOnline"><input type="radio" name="onDemandMethodTypeId" value="1">Pay by Credit Card Online</div>
+            <div id="abPayButtonECheckOnline"><input type="radio" name="onDemandMethodTypeId" value="2">Pay by E-Check Online</div>
+
+        </div>
+        <div class="abPayDetail">
+            <div class="abPayDetailCardOnline" style="">
+                <fieldset class="afwFieldSet">
+                    <legend>Online Credit Card Payment </legend>
+                    <ul>
+                        <li class="labelRow">
+                            <label id="labelCardType">Card Type</label>
+                            <label id="labelCardNumber">Card Number</label>
+                            <label id="labelCardCVV">CVV</label></li>
+                        <li class="cardSelect">
+                            <select name="cardType" id="cardType" value="">
+                                <option value="">Select One</option>
+                                <option id="cardTypeVisa" value="visa">Visa</option>
+                                <option id="cardTypeMC" value="mastercard">MasterCard</option>
+                                <option id="cardTypeAmex" value="amex">American Express</option>
+                                <option id="cardTypeDiscover" value="discover">Discover</option>
+                            </select>
+                            <input type="text" id="cardNumber" name="CreditCardNumber" value="">
+                            <input type="text" id="cardCVV" name="SecurityCode" value="">
+                        </li>
+                        <li class="labelRow">
+                            <label>Expiration Date</label>
+                            <label>Card Holder Name</label>
+                        </li>
+                        <li>
+                            <select name="cardExpirationMonth" size="1" class="shorter" id="cardExpirationMonth" value="">
+                                <option selected="" value="">MM</option>
+                                <option value="1">1 - January</option>
+                                <option value="2">2 - February</option>
+                                <option value="3">3 - March</option>
+                                <option value="4">4 - April</option>
+                                <option value="5">5 - May</option>
+                                <option value="6">6 - June</option>
+                                <option value="7">7 - July</option>
+                                <option value="8">8 - August</option>
+                                <option value="9">9 - September</option>
+                                <option value="10">10 - October</option>
+                                <option value="11">11 - November</option>
+                                <option value="12">12 - December</option>
+                            </select>
+                            <select name="cardExpirationYear" size="1" class="shorter" id="cardExpirationYear" value="">
+	<option value="" selected="">YYYY</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+	<option value="2027">2027</option>
+	<option value="2028">2028</option>
+	<option value="2029">2029</option></select>
+                            <input type="text" id="cardName" name="cardName" value="">
+                        </li>
+
+                        <li class="labelRow" id="saveCardToAccount"><input type="CheckBox" name="saveCardToAccount" value="1" checked="checked">&nbsp;Save card to account</li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="abPayDetailCardAccount" style="display:none;">
+                <fieldset class="afwFieldSet">
+                    <legend> Select Credit Card From Your Account </legend>
+                    <ul id="abPayDetailCardAccountUL">
+                        <li><input type="radio" name="echeckId" value="0">BOA checking #1234 </li>
+                        <li><input type="radio" name="echeckId" value="1">USAA checking #7654 </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="abPayDetailECheckOnline" style="display:none;">
+                <fieldset class="afwFieldSet">
+                    <legend> Online Check </legend>
+                    <ul>
+                        <li class="labelRow">
+                            <label id="labelBankRoutingNumber">Bank Routing Number</label>
+                            <label id="labelAccountNumber">Account Number</label>
+                            <label id="labelAccountNumber">Name on Account</label>
+                        </li>
+                        <li>
+                            <input type="text" id="onDemandMethodAchRoutingNumber" name="onDemandMethodAchRoutingNumber" value="">
+                            <input type="text" id="onDemandMethodAchAccountNumber" name="onDemandMethodAchAccountNumber" value="">
+                            <input type="text" id="onDemandMethodAchAccountName" name="onDemandMethodAchAccountName" value="">
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="abPayDetailECheckAccount" style="display:none;">
+                <fieldset class="afwFieldSet">
+                    <legend> Select E-Check From Your Account </legend>
+                    <ul>
+                        <li><input type="radio" name="echeckId" value="0">BOA checking #1234 </li>
+                        <li><input type="radio" name="echeckId" value="1">USAA checking #7654 </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="abPayDetailBill" style="display:none;">
+                <div>Your account will be billed.</div>
+            </div>
+            <div class="abPayDetailPayPal" style="display:none;">
+                <fieldset class="afwFieldSet">
+                    <legend>PayPal</legend>
+					<div id="abPayDetailPayPalButton">Use your PayPal Account xxxbuttonxxx</div>
+				</fieldset>
+            </div>
+        </div>
+    </fieldset>
+</div></form>
+      </div>

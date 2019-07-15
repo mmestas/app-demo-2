@@ -1,0 +1,513 @@
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+/*************** DASHBOARD ******************/
+.newDoctorMsg {padding: 15px;}
+.dashboardWrapper {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+.table.casesTable > tbody > tr > td {vertical-align: middle;text-align: left;padding: 5px 10px;font-size: 12px;}
+.table.casesTable > tbody > tr > td.action, .table.casesTable > tbody > tr > td.delete {text-align: center;padding: 10px;width: 50px;}
+.table.casesTable > tbody > tr > td.refund {text-align: center;padding: 10px;width: 190px;}
+.table.casesTable > tbody > tr > td.activeCases {vertical-align: middle; text-align: left; padding-left: 20px; min-width: 250px;}
+.table.casesTable > tbody > tr > td.assignedTo {vertical-align: middle;text-align: left;/* padding-left: 20px; */min-width: 200px;}
+.dashTitle, .open {flex:1;}
+.open {text-align: right;}
+.tableImg, .tableStats {display:inline-block; vertical-align: middle; margin-right:10px;}
+.profileImg {height:25px; width:25px;border-radius: 50%;}
+.tablePatientName {font-size: 12px;}
+.tablePatientCity {font-size: 10px;}
+.tableBtn {text-align: center; vertical-align: middle !important;}
+.table.casesTable > tbody > tr > td.summary {width:450px;text-align: justify;text-overflow:ellipsis;}
+.table.casesTable > tbody > tr > td.summary div {max-width:450px; max-height:70px;  white-space: nowrap;overflow: hidden; text-overflow:ellipsis;}
+.table.casesTable .status {min-width:234px;}
+th[data-title-text="Active Cases"] {max-width:160px;}
+.sortDropdown {padding-bottom:10px;
+  display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+  align-items: flex-end;}
+.sortDropdown select {padding:7px;border-color: #ccc;border-radius: 4px;color: #868686;font-weight: 100;max-width:220px;
+  -webkit-box-sizing: border-box;
+                  -webkit-appearance: none;
+                  padding-right: 25px;
+}
+.delete img {width: 12px;}
+.tinyDwnld {width: 15px; vertical-align: middle;}
+.returnIcon img {height: 29.07pt;width: 30.79pt;vertical-align: middle;}
+.orangeBtn {
+  background: $appDemo2Orange;
+color: $appDemo2White;
+}
+.fakeBtn {cursor: pointer;}
+.rushOrder {background-color: rgba(255, 235, 59, 0.5) !important;}
+.rushOrderAdmin {background: rgba(255, 158, 0, .35) !important;}
+.tableDropdown {
+    margin: -5px;
+}
+.spec_dropdown.tableDropdown .dropdown {
+      height: 100%;
+}
+.spec_dropdown.tableDropdown select {
+      color: #000000;
+      border: 1px solid transparent;
+      height: 56px;
+      border-radius: 0;
+      background: transparent;
+}
+.daysGreen {background-color: #59ad00; text-align: center !important; padding-left: 0 !important;padding-right: 0 !important;}
+.daysYellow {background-color: rgba(255, 235, 59, 0.5); text-align: center !important; padding-left: 0 !important;padding-right: 0 !important;}
+.daysRed {background-color: #ea5353; text-align: center !important; padding-left: 0 !important;padding-right: 0 !important;}
+.moreInfoNeeded {background-color: #ea5353 !important;}
+.required {color:#ea5353;font-size: 18px;}
+.smallText {font-size: 12px;}
+.redText {color:#ea5353 !important;}
+.redBlock {background: #ea5353 !important;color: $appDemo2White !important;}
+.maximumMsg {color: $appDemo2Orange; font-weight: bold;}
+input[name="info.firstname"], input[name="info.lastname"] {font-size: 12px;}
+select[name="techselection"] {/* font-weight:bold; */}
+.progress {max-width: 230px; width: calc(100% - 75px); display: inline-block;}
+
+/*********** ADDED 12.6.17 **********/
+.table.casesTable > tbody > tr > td.thCaseNumber {min-width: 95px;}
+/*************** Patient Details ******************/
+#activeDashboard {padding-top:50px;}
+//commented 2.15.19
+// #user li {
+//     vertical-align: middle;
+//     display: flex;
+//     align-items: center;
+//     margin: auto;
+//     margin-left: 10px;
+// }
+li a {padding: 10px 20px;font-size: 12px;border-radius: 3px;vertical-align: middle;}
+li a.dkblue {background: #00131F;color: $appDemo2White;}
+li a.blue {background: $appDemo2Teal;color: $appDemo2White;}
+.spec-box input.readonly {color:#bbbbbb;}
+.v-tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+    cursor:pointer;
+}
+.row.patientDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
+td.status.v-tooltip {display: table-cell;}
+.v-tooltip .v-tooltipInfo {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: $appDemo2White;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    font-family: 'Arial', sans-serif;
+    font-size:12px;
+    font-weight:normal;
+}
+
+td.status.v-tooltip .v-tooltipInfo {bottom: 50px;  width: 100%;  left: 15%; border-radius: 3px;}
+
+.v-tooltip .v-tooltipInfo::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.v-tooltip:hover .v-tooltipInfo {
+    visibility: visible;
+}
+
+.v-tooltipInfo img {max-width: 110px;}
+.v-tooltipInfo ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+.v-tooltipInfo ul li {margin-left: 0;}
+.choose_a_zipfile {
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  background: $appDemo2Teal;
+  display: inline-block;
+  width: 80px;
+  font-weight: 100;
+}
+.v-tooltipInfo.v-tooltipCBCT {width: 500px; margin-left: 0;}
+.v-tooltipInfo.v-tooltipCBCT img {max-width:290px;}
+
+.CBCTList {list-style-type: none; padding: 10px;}
+.CBCTList li {display:inline-block;}
+.cbctInfo {padding:10px; border: 1px solid $appDemo2TealHover;}
+.cbctInfo p {margin:0; padding:0;}
+.cbctInfo a, .cbctInfo a:visited {color:$appDemo2Orange;}
+.cbctInfo a:hover {color:$appDemo2Orange;}
+.finalReportMsg {padding-top:10px; font-weight: bold;}
+.newCaseTextArea {width: 100%;min-height: 80px; border: 1px solid rgb(234, 234, 234);}
+.reportName {font-size:12px;}
+.selectionInfo {padding-top:15px;}
+.files_list {position:relative;}
+.steps.files_list .dragFile {
+    top: 7px;
+    left: 5px;
+    height: 100px;
+}
+.dragNDrop {
+  background: transparent;
+  height: 120px;
+  width: 150px;
+  position: absolute;
+  top: 0;
+  cursor:pointer;
+}
+.dragFile {
+    height: 34px;
+    width: 80px;
+    top: 22px;
+    background: transparent;
+    position: absolute;
+    cursor:pointer;
+}
+.drag3D {
+  position: absolute;
+  cursor:pointer;
+  height: 34px;
+  width: 166px;
+  top: 10px;
+  left: 5px;
+}
+.dragMisc {
+  top: 10px;
+  height: 34px;
+  left: 22px;
+  width: 100px;
+  position: absolute;
+  cursor: pointer;
+}
+.dragMiscContainer {
+  position: relative;
+  margin-bottom: 10px;
+}
+.miscRow {padding-top:15px;}
+.miscRow span {font-size: 12px;}
+.dragMiscContainer .dragMisc {top:0;}
+.dragMisc.chooseDifferent {width: 170px}
+.dragNDrop-newCase {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+.containerDragNDrop {
+  position:relative;
+}
+.reorderBlock {position: relative; height: 208px;float: left; margin: 20px 3px 10px 3px;}
+.reorderPhotos {position: absolute;bottom: 10px;left: 5px;}
+.returntoDashBtn {
+    list-style: none;
+    padding: 0px;
+    display: inline-block;
+    float: left;
+    margin: 0px;
+    flex: 1;
+    align-items: center;
+    align-content: center;
+    }
+    .returntoDash {vertical-align: middle;}
+.fileName {font-size: 12px;}
+.schwarzIndex {max-width: 90px;padding-left: 10px;}
+.schwarzIndex input {width:100%;padding: 5px;height: 35px;border: 1px solid #EAEAEA;border-color: #ccc;font-size: 14px;color: $appDemo2Teal;font-weight: 300;/* margin-left: 5px; */}
+
+.adminNotesPatientInfo {color: #48c1c2; margin-left: 20px;}
+
+/************* Field Error *****************/
+.fieldError {padding-top:5px; color:red; font-size:12px;}
+.alertBadge {
+  background: #ea5353 ;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
+/************* New Case *****************/
+#SystemAdministratorRegistrationStep6 {
+    background: white;
+    border: 1px solid #EAEAEA;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 15px 25px;
+    display: block;
+}
+
+a.green {cursor: pointer}
+.steps {padding-top: 10px; padding-bottom:10px;}
+.choose_a_sleep_study_file {margin-left: 5px; width:inherit;}
+.impression {padding-bottom: 20px;}
+// .alternate {padding-bottom: 15px;}
+.row.creditCardInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;}
+.ccNumber {width:40%; margin-right: 5px;}
+.ccMonth, .ccYear, .ccCVV {width:20%; margin-right: 5px;}
+#ccNumber, #ccMonth, #ccYear, #ccCVV, #ccFirstName, #ccLastName {width:100%; margin:0; padding: 10px;}
+.halffield.creditCardField {width: calc(50% - 2.5%);}
+#ccName {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  color: #64656A;
+  background: none;
+  border: 1px solid #c3c3c3;
+  margin-bottom: 10px;
+}
+
+.wordDivider {padding:10px; text-align: center;}
+.add {padding-top: 10px; text-align: right;}
+.save {padding: 15px 0;}
+button:disabled,
+button[disabled],
+button[disabled]:hover{
+  border: 1px solid #dbe4d0;
+  background-color: #dbe4d0;
+  color: $appDemo2White;
+}
+
+.disabledMsg {display:none; color:red; padding:5px;}
+button[disabled]:hover + .disabledMsg {
+  display:block
+}
+
+.addCC-footer button {float:right; margin-top:10px;}
+.addCC-body {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+@media screen and (max-width:900px) {
+  .s6 {width:100%;}
+  .filter-horizontal>.filter-cell {padding:0;}
+}
+
+
+body#system_admin .registration .container form#js-ecommercePayments {margin-top:0;}
+#SystemAdministratorRegistrationStep6 .errorMsg {padding-top:15px;}
+/************* Pagination - Bootstrap **************/
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination>li {
+    display: inline;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+    color: #777;
+    cursor: not-allowed;
+    background-color: $appDemo2White;
+    border-color: #ddd;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: $appDemo2Teal;
+    text-decoration: none;
+    background-color: $appDemo2White;
+    border: 1px solid #ddd;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 2;
+    color: $appDemo2White;
+    cursor: default;
+    background-color: $appDemo2Teal;
+    border-color: $appDemo2Teal;
+}
+.ng-table-pagination {
+    margin-top: 0;
+}
+/************* Count per Page - Bootstrap **************/
+.pull-right {
+    float: right!important;
+}
+
+/*************** FONTS ******************/
+#tealDwnldSVG {width: 15px;height:15px; fill:$appDemo2Teal;}
+a.tealOutline:hover #tealDwnldSVG {
+  fill: $appDemo2White;
+}
+svg {vertical-align: middle;}
+
+/*************** ADDED 8.1.17 ******************/
+form .abOnlinePaymentFields select, form .abOnlinePaymentFields select.shorter {padding:9px 10px; text-indent:0px;}
+/*************** ADDED 8.11.17 ******************/
+
+.finalReviewStatus {padding-left: 10px;}
+/*************** ADDED 9.6.17 ******************/
+#schwarz {display: flex;flex-wrap: nowrap;justify-content: space-between;font-size: 12px;}
+.schwarzImg {width:300px;}
+#schwarz h3 {font-size:20px;}
+.siInput input {padding:10px;}
+.siHalf {padding:5px;}
+option:disabled {color:#e4e4e4;}
+
+
+
+/************************ IMAGE CROPPER *****************/
+.appDemo2-CropperWrapper {height:200px; width:200px;}
+
+.imgCropper-container > img {width: auto !important;}
+.cropper {
+  margin: 1.5rem;
+}
+
+
+.imgCropper-wrapper {
+  margin: 3rem auto 0 auto;
+      max-width: 530px;
+      text-align: center;
+      width: 100%;
+      max-height: 400px;
+      height: 400px !important;
+      background: #ccc;
+      padding-top: 0 !important;
+}
+.imgCropper-container {
+  /*background:blue;*/
+  /*max-height:400px;*/
+}
+.frame {
+border: 2px solid $appDemo2White;
+margin-bottom: 20px;
+}
+
+.frame > img {
+width: 100%;
+}
+
+#controls button {
+margin: 0 5px;
+background: $appDemo2White;
+border: none;
+cursor: pointer;
+min-width: 2em;
+font-size: 16px;
+line-height: 30px;
+transition: background 200ms ease-out;
+}
+
+#controls button:hover {
+background: #2196F3;
+}
+
+.result {
+clear: both;
+margin-top: 50px;
+width: 200px;
+height: 160px
+}
+.result img { width: 100%; }
+
+.imgCropper-controls {
+  background: $appDemo2Teal;
+  width: 530px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.imgCropper-controls button {margin: 0;font-size: 1.5em;background: transparent; padding: 0.8rem 3rem;border: none;
+display: inline-block;}
+.imgCropper-controls button:focus,
+.imgCropper-controls button:hover {
+color: #4371D0;
+cursor: pointer;
+outline: none;
+}
+
+.invisibleDiv {opacity:0;}
+.cropperInclude {position: absolute; top: 0; height: 100%;
+}
+
+/** Added 2.28.18 **/
+td.activeCases > div {display:flex; justify-content: space-between;}
+td.activeCases > div > div {display:flex;}
+.radiologyReportImg img {height:20px; width:20px; border-radius:5px;}
+.radiologyReportImg img:nth-child(2) {/*margin-left:3px;*/}
+.ng-table th.filter .input-filter {font-size:12px;}
+th input {padding:8px;}
+
+
+.goToCase {cursor:pointer; width: 100px;}
+.goToCase:hover {background-color: $appDemo2Teal;}
+
+
+.tagStyle {border-radius:50%; width:20px; height:20px;margin:auto;}
+.defaultTag {background-color: $appDemo2White; border:1px solid #ccc;}
+
+
+/*Added 10.30.18 */
+.caseNumberWithReportImages {}
+.originalDateSubmittedColumn {}
+.tagFilterStyle  { border-radius:50%; width:20px; height:20px; float: left; margin-right: 3px;}
+.tagContainer {position: absolute; top:0; list-style-type:none;  z-index:1000; background-color:$appDemo2White; border: 1px solid #ccc; padding:3px;}
+.flexBox {display:flex;}

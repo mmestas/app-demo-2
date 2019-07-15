@@ -1,0 +1,17 @@
+<div class="modal" data-backdrop="static" data-keyboard="false">
+ <div class="modal-dialog modal-md modalCentered">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">{{modalObj.title}}</h4>
+       <button type="button" class="close" data-ng-click="dismissModal()" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <span data-ng-bind-html="modalObj.text"></span>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-ng-click="dismissModal()">Remove Sassouni+ Analysis</button>
+       <button type="button" class="btn btn-primary" data-ng-click="orderSassouniReport()">I Acknowledge</button>
+     </div>
+   </div>
+ </div>
+</div>

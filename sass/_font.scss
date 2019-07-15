@@ -1,0 +1,33 @@
+//Font Family
+@font-face {font-family: 'Calibri';src: url('/fonts/CALIBRI.TTF');}
+.appDemo2-calibri {font-family: "Calibri", sans-serif;}
+
+// Text sizes
+.text-xs {font-size: 12px;}
+.text-small {font-size: 14px;}
+.text-md {font-size: 18px;}
+.text-lg {font-size: 24px;}
+
+//Bootstrap text-colors
+  .text-muted {color: $appDemo2LtGrey !important;}
+  .text-primary {color: $appDemo2Teal !important;}
+  .text-success {color: $appDemo2Green !important;}
+  .text-info {color: $appDemo2Blue !important;}
+  .text-warning {color: $appDemo2Orange !important;}
+  .text-danger {color: $appDemo2Red !important;}
+  .text-secondary {color: $appDemo2MedGrey !important;}
+  .text-dark {color: $appDemo2Grey !important;}
+  .text-body {color: $appDemo2Text !important;}
+  .text-light {color: $appDemo2Border !important;}
+  .text-white {color: $appDemo2White !important;}
+//added - not bootstrap
+  .text-primary-dark {color: $appDemo2DarkTeal !important;}
+  .text-success-dark {color: $appDemo2DarkGreen !important;}
+  .text-info-dark {color: $appDemo2DarkBlue !important;}
+  .text-warning-dark {color: $appDemo2DarkOrange !important;}
+  .text-danger-dark {color: $appDemo2DarkRed !important;}
+
+//Dynamic Font changes
+  .grow-1 {cursor:pointer;
+    &:hover {transform: scale(1.1);}
+  }

@@ -1,0 +1,2421 @@
+// label {
+//   font-size: 12px;
+//   text-align: left;
+//   color: #64656A;
+//   line-height: 11px;
+//   width: 100%;
+//   font-weight: bold;
+//   font-weight: 100;
+// }
+// input, textarea {
+//   /*padding-left: 10px;*/
+//   padding: 10px;
+//   color: #64656A;
+//   background: none;
+//   /*border: 1px solid #c3c3c3;*/
+//   border: 1px solid #ccc;
+//   margin-top: 10px;
+//   border-radius: 3px;
+// }
+//
+// input:focus, textarea:focus {
+//   outline: none;
+// }
+
+
+// select:focus {
+//   outline: none;
+// }
+// .safariSelectHack {
+//   position: relative;
+//   display:inline-block;
+// 	vertical-align:middle;
+// }
+// .safariSelectHack select {font-weight: 200; padding-right: 25px;}
+// table .safariSelectHack select {height:26px;max-width: 100px;}
+// .safariSelectHack:after {
+//     content: "";
+//     position: absolute;
+//     z-index: 2;
+//     right: 8px;
+//     top: 50%;
+//     margin-top: -3px;
+//     height: 0;
+//     width: 0;
+//     border-top: 6px solid #bbb;
+//     border-left: 6px solid transparent;
+//     border-right: 6px solid transparent;
+//     pointer-events: none;
+// }
+
+// html {
+//   -moz-box-sizing: border-box;
+// 	-webkit-box-sizing: border-box;
+// 	-ms-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+//
+// *, *::after, *::before {
+//   box-sizing: inherit;
+//   -moz-box-sizing: inherit;
+// 	-webkit-box-sizing: inherit;
+//   -ms-box-sizing: inherit;
+// 	box-sizing: inherit;
+// }
+
+body #user {
+  width: 100%;
+  height: 65px;
+  border-bottom: 1px solid #c3c3c3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 85px 0px 0px 0px;
+  z-index: 999;
+  background: #f1f1f1;
+}
+
+body #user .container {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #user h2.userName {
+  clear: both;
+  display: inline-block;
+}
+
+body #user ul.actions {
+  list-style: none;
+  padding: 0px;
+  display: inline-block;
+  float: right;
+  margin: 0px;
+}
+body #user ul.actions a {cursor:pointer;}
+body #user ul.actions li {
+  display: inline-block;
+  padding: 0px;
+}
+
+body .links {
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+body .links a.link {
+  margin: 0px;
+  text-decoration: underline;
+  color: #404040;
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+body .links a.link:hover, body .links a.link:visited {
+  color: $appDemo2TealOutline;
+}
+
+.case {
+  border-top: 1px solid white;
+  margin-top: 114px;
+  padding-top: 60px;
+  z-index: 998;
+}
+
+.case form.container .patient {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.case form.container .patient .leftcol {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.case form.container .patient .leftcol:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo {
+  border-bottom: 1px solid #c3c3c3;
+  padding-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientFirstName, .case form.container .patient .leftcol .patientInfo .row .patientLastName {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientFirstName:last-child, .case form.container .patient .leftcol .patientInfo .row .patientLastName:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientFirstName input#First_Name, .case form.container .patient .leftcol .patientInfo .row .patientFirstName #Last_Name, .case form.container .patient .leftcol .patientInfo .row .patientLastName input#First_Name, .case form.container .patient .leftcol .patientInfo .row .patientLastName #Last_Name {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo, .case form.container .patient .leftcol .patientInfo .row .caseNumber {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo:last-child, .case form.container .patient .leftcol .patientInfo .row .caseNumber:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientDOB, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientDOB {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientDOB:last-child, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientDOB:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientDOB input, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientDOB input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .caseNO, .case form.container .patient .leftcol .patientInfo .row .caseNumber .caseNO {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .caseNO:last-child, .case form.container .patient .leftcol .patientInfo .row .caseNumber .caseNO:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .caseNO input, .case form.container .patient .leftcol .patientInfo .row .caseNumber .caseNO input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientAge, .case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientGender, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientAge, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientGender {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientAge:last-child, .case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientGender:last-child, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientAge:last-child, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientGender:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientAge label, .case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientGender label, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientAge label, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientGender label {
+  text-align: center;
+}
+
+.case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientAge input, .case form.container .patient .leftcol .patientInfo .row .patientPersonalInfo .patientGender input, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientAge input, .case form.container .patient .leftcol .patientInfo .row .caseNumber .patientGender input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  padding: 0px;
+  text-transform: capitalize;
+}
+
+.case form.container .patient .leftcol .diagnostics {
+  padding-top: 15px;
+  border-top: 1px solid white;
+}
+
+.case form.container .patient .leftcol .diagnostics h3 {
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container {
+  background: white;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .profileImages {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .profileImages:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .profileImages .findingsImages .mainImage {
+  height: 250px;
+  background: #c3c3c3;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .profileImages .findingsImages .secondaryImages {
+  height: 70px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .profileImages .findingsImages .secondaryImages .camera {
+  background: #eaeaea;
+  width: 60px;
+  height: 60px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+  height: 320px;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .angle {
+  padding: 0px;
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 46.28851%;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .angle:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .angle label.orange {
+  padding: 0px;
+  margin: 0px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .angle input#Intercanthal, .case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .angle input#Rotational {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  padding: 0px;
+  text-transform: capitalize;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .WYSIWYG {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 100%;
+  height: 240px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .WYSIWYG:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .anglesWYSIWYG .row .WYSIWYG .wysiwygHeader {
+  height: 40px;
+  background: #535353;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row h3 {
+  margin-bottom: 20px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .frontalFindings {
+  margin-top: 10px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .frontalFindings textarea {
+  width: 100%;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .frontalFindings textarea#FrontalAtRest {
+  height: 120px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .frontalFindings textarea#FrontalSmile {
+  height: 60px;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .lateralProfile .lateral {
+  margin-top: 10px;
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .lateralProfile .lateral:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .leftcol .diagnostics .diagnostics-container .row .frontalNotes .lateralProfile .lateral textarea {
+  width: 100%;
+  height: 110px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .rightcol {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.case form.container .patient .rightcol:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container {
+  background: white;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images .fileinput .file {
+  /*background: #c3c3c3;*/
+  background: white;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images .fileinput .file:hover {
+  background: #64656A;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images .fileinput .file input.upload {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images .fileinput .file label.uploadLabel {
+  text-align: center;
+  color: white;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .facial-images .fileinput p {
+  text-align: center;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .imagingNotes {
+  margin-top: 10px;
+}
+
+.case form.container .patient .rightcol .row .facial-images-container .imagingNotes textarea {
+  width: 100%;
+  height: 60px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .rightcol .row .oralFindings {
+  background: white;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralImage {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralImage:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralImage img {
+  background: grey;
+  height: 100px;
+  width: 100px;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralInput {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralInput:last-child {
+  margin-right: 0;
+}
+
+.case form.container .patient .rightcol .row .oralFindings .oralFind .oralInput textarea {
+  width: 100%;
+  height: 70px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .patient .rightcol .row .x-rays {
+  width: 100%;
+  height: 100px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.case form.container .patient .rightcol .row .x-rays .x-rayImage {
+  background: #eaeaea;
+  height: 100px;
+  width: 100px;
+}
+
+.case form.container .scan {
+  display: block;
+}
+
+.case form.container .scan .cbct {
+  width: 100%;
+  background: white;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.case form.container .scan .cbct .videoNotes {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.case form.container .scan .cbct .videoNotes:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .videoNotes .video {
+  background: black;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.case form.container .scan .cbct .videoNotes .videoimaging {
+  margin-top: 10px;
+}
+
+.case form.container .scan .cbct .videoNotes .videoimaging textarea {
+  width: 100%;
+  height: 590px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .scan .cbct .cranialInfo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.case form.container .scan .cbct .cranialInfo:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .cranial-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-bottom: 10px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .cranial-box:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .cranial-box input {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .cranial-box input:focus {
+  text-align: center;
+  color: #64656A;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .cranial-box select {
+  text-indent: 50px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min {
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min label {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  line-height: 11px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min label:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min .min-input {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min .min-input:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min .min-input input {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min .min-input input:focus {
+  text-align: center;
+  color: #64656A;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .min .min-input select {
+  text-indent: 50px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row #riz {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-bottom: 10px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row #riz:last-child {
+  margin-right: 0;
+}
+
+.case form.container .scan .cbct .cranialInfo .row #riz label {
+  width: 100%;
+}
+
+.case form.container .scan .cbct .cranialInfo .row #riz input {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row #riz input:focus {
+  text-align: center;
+  color: #64656A;
+}
+
+.case form.container .scan .cbct .cranialInfo .row h3 {
+  margin-top: 10px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .panoral {
+  padding: 0px;
+}
+
+.case form.container .scan .cbct .cranialInfo .row .panoral textarea {
+  width: 100%;
+  height: 75px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+}
+
+.case form.container .otherIndications {
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 1px solid #c3c3c3;
+  padding-bottom: 20px;
+}
+
+.case form.container .otherIndications #indicate {
+  border-bottom: 1.5px solid white;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.case form.container .otherIndications h3 {
+  padding-bottom: 10px;
+}
+
+.case form.container .otherIndications .indicators {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.case form.container .otherIndications .checkboxs {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  margin-bottom: 10px;
+}
+
+.case form.container .otherIndications .checkboxs:last-child {
+  margin-right: 0;
+}
+
+.case form.container .otherIndications .checkboxs .check {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.case form.container .otherIndications .other {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+
+.case form.container .otherIndications .other:last-child {
+  margin-right: 0;
+}
+
+.case form.container .otherIndications .other textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+  background: white;
+}
+
+.case form.container .diagnostics_findings {
+  margin-top: 25px;
+}
+
+.case form.container .diagnostics_findings textarea {
+  width: 100%;
+  height: 450px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+  background: white;
+}
+
+.case form.container .save {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+  padding: 0px;
+}
+
+.case form.container .save #save {
+  background: $appDemo2TealOutline;
+  color: white;
+  border: 0px;
+  padding: 10px 30px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.case form.container .save #save:hover {
+  background: #64656A;
+  cursor: pointer;
+}
+
+body#system_admin {
+  background: #f9f9f9;
+}
+
+.registration .container h2 {
+  clear: both;
+  // color: white;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 25px;
+}
+
+.registration .container h2.teal {
+  color: $appDemo2TealOutline;
+  font-size: 22px;
+  font-weight: 300;
+  background: transparent;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 0;
+}
+.registration .container h4.subStepTitle {
+  text-align: center;
+  color: #868686;
+  margin-top: 0;
+  margin-bottom: 20px;
+  }
+.registration .container h2.green {
+  background: $appDemo2TealOutline;
+}
+
+.registration .container form {
+  // background: white;
+  // border: 1px solid #EAEAEA;
+  /* width: 700px; */
+  // width: 1115px;
+  margin: 0 auto;
+  // margin-top: 20px;
+  padding: 15px 25px;
+  display: block;
+}
+
+.registration .container form#js-ecommercePayments {
+  width:100%;
+}
+
+.registration .container form .field .lock, .registration .container form .field .camera, .registration .container form .field .bank, .registration .container form .field .dropdown, .registration .container form .halffield .lock, .registration .container form .halffield .camera, .registration .container form .halffield .bank, .registration .container form .halffield .dropdown {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.registration .container form .field .lock img, .registration .container form .field .camera img, .registration .container form .field .bank img, .registration .container form .field .dropdown img, .registration .container form .halffield .lock img, .registration .container form .halffield .camera img, .registration .container form .halffield .bank img, .registration .container form .halffield .dropdown img {
+  height: 20px;
+}
+
+.registration .container form .field .dropdown, .registration .container form .halffield .dropdown {
+  border-left: 1px solid #eaeaea;
+}
+
+.registration .container form .field .dropdown img, .registration .container form .halffield .dropdown img {
+  height: 10px;
+  z-index: 99;
+}
+
+.registration .container form .field {
+  padding: 0px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.registration .container form .field p {
+  background: #f1f1f1;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 10px;
+  color: #64656A;
+  margin: 0px;
+}
+
+.registration .container form .field input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.registration .container form .field textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.registration .container form .row .BillingAccount {
+  /*height: 200px;*/
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.registration .container form .row .BillingAccount .selectBilling {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+  margin-bottom: 10px;
+}
+
+.registration .container form .row .BillingAccount .selectBilling h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container form .row .BillingAccount .selectBilling .select {
+  width: 50%;
+  position: relative;
+}
+
+.registration .container form .row .BillingAccount .selectBilling .select .dropdown {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  border-left: 1px solid #EAEAEA;
+}
+
+.registration .container form .row .BillingAccount .selectBilling .select .dropdown img {
+  height: 10px;
+  z-index: 99;
+}
+
+.registration .container form .row .BillingAccount .selectBilling .select select#BillingAccount {
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid #EAEAEA;
+  height: 45px;
+  text-align: left;
+  -webkit-appearance: none;
+  color: #64656A;
+  text-indent: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.registration .container form .row .BillingAccount .selectBilling .select select#BillingAccount:focus {
+  outline: none;
+}
+
+/************** change to div ****************/
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount {
+  /*height: 200px;*/
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+  margin-bottom: 10px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling .select {
+  width: 50%;
+  position: relative;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling .select .dropdown {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  border-left: 1px solid #EAEAEA;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling .select .dropdown img {
+  height: 10px;
+  z-index: 99;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling .select select#BillingAccount {
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid #EAEAEA;
+  height: 45px;
+  text-align: left;
+  -webkit-appearance: none;
+  color: #64656A;
+  text-indent: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .BillingAccount .selectBilling .select select#BillingAccount:focus {
+  outline: none;
+}
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails {
+  border: 1px solid #EAEAEA;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderHeader {
+  padding: 25px 25px;
+  border-bottom: 1px solid #EAEAEA;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderHeader h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails footer.orderFooter {
+  padding: 25px 25px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails footer.orderFooter h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails footer.orderFooter h3#finalPrice {
+  font-size: 24px;
+  color: $appDemo2Orange;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 25px 25px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoHeader {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoHeader h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoHeader h3#diagnosticPrice, .registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoHeader #subTotalPrice, .registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoHeader #finalPrice {
+  font-size: 20px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoDetails {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .orderDetails .orderInfo .orderInfoDetails .detail {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators {
+  background: #c3c3c3;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators .other {
+  margin-top: 10px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators .other:last-child {
+  margin-right: 0;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators .other textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+  background: white;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators .checkboxs {
+  width: 25%;
+  float: left;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .indicators .checkboxs .check {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield:last-child {
+  margin-right: 0;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+  margin: 0px;
+}
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield label.radioLabel {
+  margin-right: 10px;
+}
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input[type='radio'] {
+  width:13px;
+  height: 15px;
+  margin-right: 3px;
+}
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input.lock {
+  background: url(images/lock.svg) cover;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input::-webkit-input-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input::-moz-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input:-ms-input-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield input::placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield select#State,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield select#Country,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #account,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #creditcard,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #BillingState,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #patientGender,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #expiry-month,
+.registration .container #SystemAdministratorRegistrationStep6 .row .halffield #expiry-year, .status_drop {
+  background: transparent;
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid #EAEAEA;
+  height: 45px;
+  text-align: left;
+  margin-top: 0px;
+  -webkit-appearance: none;
+  padding-left: 10px;
+  color: #a9a9ab;
+  text-indent: 0px;
+  font-size: 12px;
+  font-weight: normal;
+}
+/**************** change from form to div***********************************************************************************************/
+
+.registration .container form .row .orderDetails {
+  border: 1px solid #EAEAEA;
+}
+
+.registration .container form .row .orderDetails .orderHeader {
+  padding: 25px 25px;
+  border-bottom: 1px solid #EAEAEA;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.registration .container form .row .orderDetails .orderHeader h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container form .row .orderDetails footer.orderFooter {
+  padding: 25px 25px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registration .container form .row .orderDetails footer.orderFooter h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container form .row .orderDetails footer.orderFooter h3#finalPrice {
+  font-size: 24px;
+  color: $appDemo2Orange;
+}
+
+.registration .container form .row .orderDetails .orderInfo {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 25px 25px;
+}
+
+.registration .container form .row .orderDetails .orderInfo .orderInfoHeader {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registration .container form .row .orderDetails .orderInfo .orderInfoHeader h3 {
+  font-size: 16px;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.registration .container form .row .orderDetails .orderInfo .orderInfoHeader h3#diagnosticPrice, .registration .container form .row .orderDetails .orderInfo .orderInfoHeader #subTotalPrice, .registration .container form .row .orderDetails .orderInfo .orderInfoHeader #finalPrice {
+  font-size: 20px;
+}
+
+.registration .container form .row .orderDetails .orderInfo .orderInfoDetails {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.registration .container form .row .orderDetails .orderInfo .orderInfoDetails .detail {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+
+.registration .container form .row .indicators {
+  background: #c3c3c3;
+}
+
+.registration .container form .row .indicators .other {
+  margin-top: 10px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+
+.registration .container form .row .indicators .other:last-child {
+  margin-right: 0;
+}
+
+.registration .container form .row .indicators .other textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 12px;
+  padding-top: 10px;
+  border: 1px solid #EAEAEA;
+  background: white;
+}
+
+.registration .container form .row .indicators .checkboxs {
+  width: 25%;
+  float: left;
+}
+
+.registration .container form .row .indicators .checkboxs .check {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.registration .container form .row .halffield {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.registration .container form .row .halffield:last-child {
+  margin-right: 0;
+}
+
+.registration .container form .row .halffield input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+  margin: 0px;
+}
+.registration .container form .row .halffield label.radioLabel {
+  margin-right: 10px;
+}
+.registration .container form .row .halffield input[type='radio'] {
+  width:13px;
+  height: 15px;
+  margin-right: 3px;
+}
+.registration .container form .row .halffield input.lock {
+  background: url(images/lock.svg) cover;
+}
+
+.registration .container form .row .halffield input::-webkit-input-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container form .row .halffield input::-moz-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container form .row .halffield input:-ms-input-placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container form .row .halffield input::placeholder {
+  color: #a9a9ab;
+}
+
+.registration .container form .row .halffield select {
+    height: 45px;
+    border: 1px solid #EAEAEA;
+    font-size: 12px;
+    margin: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    color: #64656A;
+    /*width:100%;*/
+}
+.registration .container form .row .halffield select#State,
+.registration .container form .row .halffield select#Country,
+.registration .container form .row .halffield #account, .registration .container form .row .halffield #creditcard, .registration .container form .row .halffield #BillingState, .registration .container form .row .halffield #patientGender, .registration .container form .row .halffield #expiry-month, .registration .container form .row .halffield #expiry-year, .status_drop {
+  background: transparent;
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid #EAEAEA;
+  height: 45px;
+  text-align: left;
+  margin-top: 0px;
+  -webkit-appearance: none;
+  padding-left: 10px;
+  color: #a9a9ab;
+  text-indent: 0px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.spec_dropdown{
+	display: block;
+	position:relative;
+	margin-top: 2px;
+}
+.spec_dropdown .dropdown img{
+	height: 9px;
+	z-index: 99;
+}
+.spec_dropdown select{
+	border: 1px solid #c3c3c3;
+	background: #fff;
+	width: 100%;
+	border-radius: 0px;
+	border: 1px solid #EAEAEA;
+	border-color: #ccc;
+	height: 36px;
+	border-radius: 3px;
+	text-align: left;
+	margin-top: 0px;
+	-webkit-appearance: none;
+	padding-left: 10px;
+	color: #a9a9ab;
+	text-indent: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	text-indent: initial !important;
+}
+
+.status_drop{
+	border: 1px solid #C3C3C3 !important;
+}
+.halffield{
+	float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.halffield .dropdown img{
+	height: 10px;
+    z-index: 99;
+}
+.dropdown{
+	 pointer-events: none;
+	 height: 36px;
+	 width: 40px;
+	 position: absolute;
+	 right: 0;
+	 display: -webkit-flex;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -webkit-justify-content: center;
+	 -ms-flex-pack: center;
+	 justify-content: center;
+	 -webkit-align-items: center;
+	 -ms-flex-align: center;
+	 align-items: center;
+	 border-left: 1px solid #eaeaea;
+}
+.registration .container form .row .halffield select#State:focus,
+.registration .container form .row .halffield select#Country:focus,
+.registration .container form .row .halffield #account:focus, .registration .container form .row .halffield #creditcard:focus, .registration .container form .row .halffield #BillingState:focus, .registration .container form .row .halffield #patientGender:focus, .registration .container form .row .halffield #expiry-month:focus, .registration .container form .row .halffield #expiry-year:focus {
+  outline: none;
+}
+
+.registration .container form .row .fourthfield {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.registration .container form .row .fourthfield:last-child {
+  margin-right: 0;
+}
+
+.registration .container form .row .fourthfield .add {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  height: 125px;
+}
+
+.registration .container form .row .fourthfield .box {
+  /*border: 1px solid #c3c3c3;*/
+  height: 125px;
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.registration .container form .row .fourthfield .box img[src=""] {
+  display: none;
+}
+
+.registration .container form .row .fourthfield .box img:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.registration .container form .row .fourthfield .box .camera {
+  background: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  border-radius: 50%;
+}
+
+.registration .container form .row .fourthfield .box .camera img {
+  width: 30px;
+}
+
+.registration .container form .row .fourthfield .img {
+  height: 125px;
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.registration .container form .row .fourthfield .img img {
+  height: 100%;
+}
+
+.registration .container form .row .fourthfield .upload {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.registration .container form .row .fourthfield .upload .camera {
+  background: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+  border-radius: 50%;
+}
+
+.registration .container form .row .fourthfield .upload .camera img {
+  width: 30px;
+}
+
+.registration .container form .row .fourthfield .selectionInfo {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .registration .container form .row .fourthfield .selectionInfo h3 {
+    text-align: center;
+  }
+
+.registration .container form .row .save {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+          -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.registration .container form .row .save button {
+  margin-right: 10px;
+}
+
+.registration .container form .row .save #save {
+  background: $appDemo2TealOutline;
+  color: white;
+  border: 0px;
+  padding: 10px 30px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.registration .container form .row .save #save:hover {
+  background: #64656A;
+  cursor: pointer;
+}
+
+.profileImage {
+  background: #eaeaea;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.profileImage img {
+  width: 20px;
+}
+
+.profileImage img[src=""] {
+  display: none;
+}
+
+.patientInfo {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+-webkit-flex-direction: column;
+flex-direction: column;
+  margin-left: 10px;
+}
+
+.patientInfo p {
+  margin: 0px;
+}
+
+.patientInfo span {
+  font-size: 10px;
+  text-align: left;
+  color: #64656A;
+  margin: 0px;
+}
+
+
+body#login {
+  background: #f9f9f9;
+}
+
+.login {
+  height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.login .container .login_form {
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #EAEAEA;
+  padding: 10px;
+  top: 50%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  width: 600px;
+}
+
+.login .container .login_form h1 {
+  text-align: center;
+  color: $appDemo2Orange;
+}
+
+.login .container .login_form p {
+  text-align: center;
+}
+
+.login .container .login_form form#loginform, .login .container .login_form form#forgotPasswordForm {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.login .container .login_form form#loginform .submit, .login .container .login_form form#forgotPasswordForm .submit {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.login .container .login_form form#loginform .field, .login .container .login_form form#forgotPasswordForm .field {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.login .container .login_form form#loginform .field input, .login .container .login_form form#forgotPasswordForm .field input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #EAEAEA;
+  font-size: 12px;
+}
+
+.login .container .login_form form#loginform p, .login .container .login_form form#loginforgotPasswordFormform p {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.login .container .login_form form#loginform p span.bluespane, .login .container .login_form form#forgotPasswordForm p span.bluespane {
+  color: #23abe2;
+  cursor:pointer;
+}
+
+.login .container .login_form form#loginform p span.bluespane a, .login .container .login_form form#loginform p span.bluespane a:visited,
+.login .container .login_form form#forgotPasswordForm p span.bluespane a, .login .container .login_form form#forgotPasswordForm p span.bluespane a:visited {
+  color: #23abe2;
+  cursor:pointer;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: block;
+}
+
+.row::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+h2, h1 {
+  font-size: 18px;
+  text-align: left;
+  color: #64656A;
+  line-height: 23px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p, h3 {
+  font-size: 12px;
+  text-align: left;
+  color: #64656A;
+  line-height: 14px;
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: bold;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+a.button {
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  padding: 8px 20px;
+  background: #C3C3C3;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a.button:hover {
+  background: #64656A;
+  cursor: pointer;
+}
+
+// a.green {
+//   background: $appDemo2TealOutline;
+//   border-radius: 4px;
+//   box-shadow: none;
+//   border: none;
+//   padding: 8px 20px;
+//   color: white;
+//   font-size: 12px;
+//   text-decoration: none;
+//   /*margin-right: 10px;*/
+// }
+//
+// a.green:hover {
+//   background: $appDemo2TealHover;
+// }
+
+// a.teal {
+//   background: $appDemo2TealOutline;
+//   border-radius: 4px;
+//   box-shadow: none;
+//   border: none;
+//   padding: 8px 20px;
+//   color: white;
+//   font-size: 12px;
+//   text-decoration: none;
+//   /*margin-right: 10px;*/
+// }
+//
+// a.teal:hover {
+//   background: $appDemo2TealHover;
+// }
+
+a.tealOutline {background: transparent;border-radius: 4px;box-shadow: none;border: 2px solid $appDemo2TealOutline;padding: 8px 15px;color: $appDemo2TealOutline;font-size: 12px;text-decoration: none;}
+a.tealOutline:hover {
+  background: $appDemo2TealOutline;
+  color:#fff;
+}
+
+a.orange {
+  background: $appDemo2Orange;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  /*margin-right: 10px;*/
+}
+
+a.orange:hover {
+  background: #ffd07b;
+}
+
+.actions li {margin-left:10px;}
+
+button {
+  box-shadow: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #C3C3C3;
+  color: white;
+  font-size: 12px;
+}
+
+button:hover {
+  background: #64656A;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+input[type=submit].green{
+	border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    padding: 8px 20px;
+    background: #C3C3C3;
+    background: $appDemo2TealOutline;
+    color: white;
+    font-size: 12px;
+	cursor:pointer;
+}
+
+
+
+
+
+input[type="checkbox"] {
+  background: blue;
+}
+
+button.green {
+  background: $appDemo2TealOutline;
+}
+
+button.green:hover {
+  background: $appDemo2TealHover;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+#js-ecommercePayments input[type="checkbox"] {
+  display: block;
+}
+
+label.checkbox {
+  font-size: 12px;
+  text-align: left;
+  color: #64656A;
+  line-height: 14px;
+  /*font-weight: normal;*/
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+  z-index: 970;
+}
+
+input[type="checkbox"] + label:before {
+  background: white;
+  border: 1px solid #EAEAEA;
+  content: " ";
+  display: inline-block;
+  font-size: 12px;
+  height: 17px;
+  width: 17px;
+  line-height: 17px;
+  margin-top: 02px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+}
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+// .modal {
+//   display:    none;
+//   position:   fixed;
+//   z-index:    1000;
+//   top:        0;
+//   left:       0;
+//   height:     100%;
+//   width:      100%;
+//   background: rgba( 255, 255, 255, .8 )
+//   url('http://i.stack.imgur.com/FhHRx.gif')
+//   50% 50%
+//   no-repeat;
+// }
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+  overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+  display: block;
+}
+
+/***Payment***/
+#dialog{
+  display:none;
+}
+#dialog .cc_number {
+    padding-left: 10px;
+    color: #64656A;
+    background: none;
+    border: 1px solid #c3c3c3;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#dialog .spec_dropdown{
+    width: 46%;
+    float: left;
+}
+#dialog .cc_year_dropdown{
+	margin-left:4%;
+}
+#dialog .cc_cvv{
+  width:117px;
+   padding-left: 10px;
+    color: #64656A;
+    background: none;
+    border: 1px solid #c3c3c3;
+    margin-top: 10px;
+
+    height: 40px;
+    font-size: 18px;
+    font-weight: normal;
+}
+#dialog .saveCreditCard{
+
+}
+#dialog .saveCreditCard:hover{
+
+}
+.creditCards{
+  width:255px;
+  height:30px;
+  border-radius: 6px;
+  margin-left:30px;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+}
+.white_bg{
+	width: 100%;
+	background: white;
+	border: 0 solid #EAEAEA;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+.spec-box{
+	/* float: left; */
+  /* display: block; */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.spec-box input{
+	width: 100%;
+	height: 35px;
+	border: 1px solid #EAEAEA;
+	border-color: #ccc;
+	font-size: 14px;
+	color: $appDemo2TealOutline;
+	font-weight: 300;
+}
+
+.spec-box textarea{
+	/* width: 100%;
+	height: 240px;
+	border: 1px solid #EAEAEA;
+	border-color: #ccc;
+	font-size: 12px;
+	margin-bottom: 10px; */
+  width: 100%;   height: 120px;   border: 1px solid #ccc; font-size: 12px;  margin-bottom: 10px;
+}
+.spec-box.halffield {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.folder_icon{
+	/*margin-top: 20px;*/
+    margin-left: 17px;
+    vertical-align: middle;
+    padding: 10px;
+    /*width: 33px;*/
+}
+.spec-width31per{
+	width: 31%;
+}
+.spec-longTitle{
+	width: calc(33% - 10px);
+}
+.spec-width1of6 {
+  width:15%;
+}
+.files_list li{
+	list-style-type:none;
+	font-size: 12px;
+}
+.files_list li img{
+	margin-right:10px;
+}
+.upload_video{
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.upload_video_btn{
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.spec-width100per{
+	width:100%;
+}
+.head_title_block{
+	height:41px;
+	/* background:$appDemo2TealHover; */
+	/* color: $appDemo2TealOutline; */
+}
+.head_title_block h3{
+	line-height:41px;
+	color: $appDemo2TealOutline;
+	margin-left:20px;
+	font-size: 18px;
+	font-weight: 300;
+}
+/*.left_column{
+	float:left;
+	width:49%;
+	margin-top: 20px;
+}
+.right_column{
+	float:right;
+	width:49%;
+	margin-top: 20px;
+}*/
+label {line-height: 14px;}
+.columnWrapper .row {
+  display: flex;
+	flex-direction: row;
+  /*flex-wrap: nowrap;*/
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+  padding-top:10px;
+  /*border-bottom: 1px dotted grey;*/
+}
+.columnWrapper .row .spec-box {
+  flex:1;
+  display: flex;
+	flex-direction: column;
+}
+.columnWrapper .row .spec-box label {flex:1;}
+/*.columnWrapper .left_column, .columnWrapper .right_column {flex:1; padding:10px;}*/
+.columnWrapper .left_column{background: purple;}
+.columnWrapper .right_column{background: yellow;}
+
+@media screen and (max-width:768px) {
+  .columnWrapper .row {justify-content: flex-start;}
+  .spec-width1of6 {width:calc(33% - 10px);}
+  .spec-longTitle {width:calc(50% - 10px);}
+  .columnWrapper .row .spec-box {flex:none;}
+}
+@media screen and (max-width:568px) {
+  .spec-width1of6 {width:calc(50% - 10px);}
+  .spec-longTitle {width:calc(100%);}
+}
+
+.upload{
+	cursor:pointer;
+	display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 120px;
+	border: 1px solid #e0e0e0;
+
+}
+.upload img {
+    display: block;
+    /*width: 150px;
+	max-width: 150px;
+  max-width: 148px;
+    max-height: 118px;*/
+    max-width: 146px;
+    max-height: 114px;
+}
+.hidden{
+	display:none !important;
+}
+.image_block{
+	width:150px;
+	/*height:150px;*/
+	position:relative;
+	float:left;
+	margin: 20px 3px 10px 3px;
+}
+.image_block_title{
+	/*position:absolute;*/
+	bottom:0;
+	width: 100%;
+    text-align: center;
+}
+.mr0{
+	margin-right:0;
+}
+// .choose_a_file { NOTE: Not used
+//     cursor: pointer;
+//     border-radius: 4px;
+//     box-shadow: none;
+//     border: none;
+//     padding: 10px 20px;
+//     color: white;
+//     font-size: 12px;
+//     background: $appDemo2TealOutline;
+//     display: inline-block;
+//     width: 80px;
+// }
+// .choose_a_video_file{ NOTE: Not used
+// 	cursor: pointer;
+//     border-radius: 4px;
+//     box-shadow: none;
+//     border: none;
+//     padding: 10px 20px;
+//     color: white;
+//     font-size: 12px;
+//     background: $appDemo2TealOutline;
+//     display: block;
+//     width: 117px;
+//     margin: 0 auto;
+// }
+.choose_a_cbct_file {
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    background: $appDemo2TealOutline;
+    display: inline-block;
+    width: 80px;
+}
+.choose_a_sleep_study_file{
+	cursor: pointer;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    background: $appDemo2TealOutline;
+    display: inline-block;
+    width: 80px;
+}
+.order_price{
+	float:right;
+}
+.order_footer{
+	height: 50px;
+}
+.order_footer span {
+    line-height: 50px;
+    margin: 0 21px;
+    font-weight: 700;
+}
+.order_type {
+    height: 25px;
+}
+.order_type.type1{
+	font-size:18px;
+}
+.order_type.type1 {
+    font-size: 19px;
+    font-weight: 400;
+	}
+.order_orange_txt{
+	color:$appDemo2Orange;
+	font-size:17px;
+}
+
+
+.table-bordered {
+  border: 0 solid #ccc;
+  border-collapse: separate;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #ccc;
+}
+.table > thead:first-child > tr:first-child > th {
+  border-top: 1px solid #ccc;
+}
+select, select[size="0"], select[size="1"] {
+    // border-radius: 0px;
+    // border-color: rgb(169, 169, 169);
+}
+.table-bordered > thead > tr:first-child > th {background: rgba(89, 173, 0, 0.2);background: rgba(222, 210, 149, 0.2);}
+.table-bordered > thead > tr:not(:first-child) > th {border-top:0;}
+.table-bordered > thead > tr:not(:first-child) > th:first-child {border-left-width:1px;}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.table-bordered > tbody > tr > td {
+    border-right: 1px solid #ccc;
+    border-left: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 0;
+}
+.table-bordered > tbody > tr > td:first-child {border-left: 1px solid #ccc;}
+.table > thead:first-child > tr:first-child > th:first-child {
+  border-top-left-radius: 4px;
+  border-left-width: 1px;
+  /*max-width: 50px;*/
+  max-width: 68px;
+}
+.table > thead:first-child > tr:first-child > th:last-child {
+  border-top-right-radius: 4px;
+}
+td.delete .fa, td.refund .fa {
+    font-size: 200%;
+}

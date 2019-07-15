@@ -1,0 +1,338 @@
+/*************** New Patient Signup Nav *******************/
+#newPatientSignup {margin-top:20px;
+  .container { background-color: transparent; padding-bottom: 100px;
+    .sideNav {width:200px; background-color: $appDemo2White; margin-right:5px;
+      // .saveAndReturnContainer {position: absolute; bottom:10px;}
+      .saveAndReturn {text-align: center;cursor: pointer;border: 1px solid black;padding: 5px;margin: 10px;
+        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+            -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+                box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1) inset;
+        &:hover {background-color: $appDemo2MedGrey; color: $appDemo2White;}
+        i.fa {font-size: 24px;width: 40px;}
+      }
+      .sideNavLink {padding:12px; margin-bottom: 7px; background-color: $appDemo2White; cursor: pointer;font-weight: 600; color: $appDemo2MedGrey;
+        &:last-child {margin-bottom: 0;}
+        &.nmiStep {color:$appDemo2Orange;
+          &.active, &:hover {background-color: $appDemo2DarkTeal; color: $appDemo2White;}
+        }
+        &.active, &:hover {background-color: $appDemo2DarkTeal; color: $appDemo2White;
+          position:relative;
+          -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+             -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          &:before, &:after {
+            content:"";
+            position:absolute;
+            z-index:-1;
+            -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+            -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+            box-shadow:0 0 20px rgba(0,0,0,0.8);
+            top:50%;
+            bottom:0;
+            left:10px;
+            right:10px;
+            -moz-border-radius:100px / 10px;
+            border-radius:100px / 10px;
+          }
+          &:after {
+            right:10px;
+            left:auto;
+            -webkit-transform:skew(8deg) rotate(3deg);
+               -moz-transform:skew(8deg) rotate(3deg);
+                -ms-transform:skew(8deg) rotate(3deg);
+                 -o-transform:skew(8deg) rotate(3deg);
+                    transform:skew(8deg) rotate(3deg);
+          }
+        }
+        &.disabled {color: $appDemo2BorderGrey; cursor: auto;
+          &:hover {
+            background-color:$appDemo2White;
+            -webkit-box-shadow: none;
+             -moz-box-shadow: none;
+                  box-shadow: none;
+          }
+        }
+        .fa-check-circle {color: $appDemo2Orange;}
+      }
+    }
+    .signUpContent {width: calc(100% - 200px); background-color: $appDemo2White;
+      .uploadLabels {
+              font-size: 12px;
+              color: $appDemo2Grey;
+              padding-top: 5px;
+              overflow: hidden;
+              word-break: break-word;
+        }
+      .uploadWrapper {padding: 10px;text-align: center;
+        .uploadInnerWrapper {border: 1px solid $appDemo2Border; padding:10px; min-height: 142px; position: relative;
+          .uploadLabel {
+          }
+        }
+        .selectionInfo {text-align: center;
+          h3 {text-align: center;}
+        }
+      }
+      #newCaseStep1 {
+        .uploadWrapper {padding: 10px;text-align: center;
+          .uploadInnerWrapper {border: 1px solid $appDemo2Border; padding:10px; min-height: 142px; position: relative;
+            .uploadLabel {
+
+            }
+          }
+        }
+        .row {
+          .halffield {
+            &.newCaseDatepicker {
+              .patientDOB {
+                .md-datepicker-input-container {
+                  width: calc(100% - 50px);
+                }
+              }
+              .patientAgeInput {width:130px; float:right;}
+            }
+          }
+          .flex {
+            .ethnicity {width:250px; margin-left:15px;}
+          }
+        }
+      }
+      #newCaseStep2 {
+        .md-datepicker-input-container {width:170px;}
+      }
+      #newCaseStep6 {
+        #archAnalysisForm {font-size: 13px;width: calc(100% - 260px);
+          @media (max-width: 992px) {width:100%;}
+          .archAnalysisFormLabels {width:calc(100% - 200px);}
+        }
+      }
+      #needsMoreInfoStep {
+        .nmiAdminNotes {border: 1px solid $appDemo2BorderGrey3; padding: 15px;
+          label {
+            font-weight: bold; font-size:16px; color: $appDemo2Teal;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+#toothMap {
+  ul.tabbedList { list-style-type: none; margin-top:5px;
+    li {
+      border: 1px solid black;
+      padding: 5px;
+      cursor: pointer;
+      &:hover, &.selectedDiagram {background-color: $appDemo2DarkTeal; color: $appDemo2White;}
+    }
+  }
+  .toothDiagram {padding: 0 10px 10px; text-align: center;width: 511px;height: 600px;
+    h2 {
+      margin:0; text-align:center;
+    }
+  }
+
+  #Teeth {
+    #LowerTeeth , #UpperTeeth {
+      g {
+        &:focus {outline:0;}
+        &.hideTooth {display:none;}
+        &.toothDisabled path {fill: $appDemo2Border;
+          &:hover {cursor: auto; fill: $appDemo2Border;}
+        }
+        path {
+          &:hover {
+            cursor: pointer;
+            fill: #fff263;
+          }
+          &:focus {outline:0;}
+        }
+        &.highlight path {fill: $appDemo2Teal;}
+        &.highlightMatch path {fill: #fff263;}
+      }
+    }
+    &.missingTeethDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2Teal;}
+        g.highlightMatch path {fill: #fff263;}
+      }
+    }
+    &.crownDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2Orange;}
+        g.highlightMatch path {fill: $appDemo2OrangeHover;}
+      }
+    }
+    &.bridgeDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2Green;}
+        g.highlightMatch path {fill: $appDemo2GreenHover;}
+      }
+    }
+    &.implantsDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2Blue;}
+        g.highlightMatch path {fill: $appDemo2BlueHover;}
+      }
+    }
+    &.impactedDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2DkMauve;}
+        g.highlightMatch path {fill: $appDemo2DkMauveHover;}
+      }
+    }
+    &.deciduousDiagram {
+      #LowerTeeth , #UpperTeeth {
+        g.highlight path {fill: $appDemo2Fucshia;}
+        g.highlightMatch path {fill: $appDemo2FucshiaHover;}
+      }
+    }
+  }
+
+  .toothMap {
+    width: 30px;
+    height: 30px;
+    background: #e0e0e0;
+    color: #888888;
+    border-radius: 50%;
+    border: 2px solid darkgrey;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {background-color: #fff263;}
+    &.toothSelected {background-color: $appDemo2Teal; color:$appDemo2White; border-color:darken($appDemo2Teal, 10%);}
+    &:focus {outline:0;}
+  }
+
+  .missingTeethDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2Teal; color:$appDemo2White; border-color:darken($appDemo2Teal, 10%);}
+  }
+  .crownDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2Orange; color:$appDemo2White; border-color:darken($appDemo2Orange, 10%);}
+  }
+  .bridgeDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2Green; color:$appDemo2White; border-color:darken($appDemo2Green, 10%);}
+  }
+  .implantsDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2Blue; color:$appDemo2White; border-color:darken($appDemo2Blue, 10%);}
+  }
+  .impactedDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2DkMauve; color:$appDemo2White; border-color:darken($appDemo2DkMauve, 15%);}
+  }
+  .deciduousDiagram {
+   .toothMap.toothSelected {background-color: $appDemo2Fucshia; color:$appDemo2White; border-color:darken($appDemo2Fucshia, 20%);}
+  }
+
+  // In case where user cannot edit (Create Rx Form)  This is a hack for now
+  .toothInactive {
+    #Teeth {
+      #LowerTeeth , #UpperTeeth {
+        g {
+          &:focus {outline:0;}
+          &.toothDisabled path {fill: $appDemo2Border;
+            &:hover {cursor: auto; fill: $appDemo2Border;}
+          }
+          path {
+            &:hover {
+              cursor: auto;
+              fill: $appDemo2White;
+            }
+            &:focus {outline:0;}
+          }
+        }
+      }
+      &.missingTeethDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2Teal;}}
+          g.highlightMatch path {&:hover  {fill: #fff263};}
+        }
+      }
+      &.crownDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2Orange;}}
+          g.highlightMatch path {&:hover  {fill: $appDemo2OrangeHover;}}
+        }
+      }
+      &.bridgeDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2Green;}}
+          g.highlightMatch path {&:hover  {fill: $appDemo2GreenHover;}}
+        }
+      }
+      &.implantsDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2Blue;}}
+          g.highlightMatch path {&:hover  {fill: $appDemo2BlueHover;}}
+        }
+      }
+      &.impactedDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2DkMauve;}}
+          g.highlightMatch path {&:hover  {fill: $appDemo2DkMauveHover;}}
+        }
+      }
+      &.deciduousDiagram {
+        #LowerTeeth , #UpperTeeth {
+          g.highlight path {&:hover  {fill: $appDemo2Fucshia;}}
+          g.highlightMatch path {&:hover  {fill: $appDemo2FucshiaHover;}}
+        }
+      }
+    }
+    .missingTeethDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2Teal; color:$appDemo2White; border-color:darken($appDemo2Teal, 10%);}
+     }
+    }
+    .crownDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2Orange; color:$appDemo2White; border-color:darken($appDemo2Orange, 10%);}
+     }
+    }
+    .bridgeDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2Green; color:$appDemo2White; border-color:darken($appDemo2Green, 10%);}
+     }
+    }
+    .implantsDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2Blue; color:$appDemo2White; border-color:darken($appDemo2Blue, 10%);}
+     }
+    }
+    .impactedDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2DkMauve; color:$appDemo2White; border-color:darken($appDemo2DkMauve, 15%);}
+     }
+    }
+    .deciduousDiagram {
+     .toothMap.toothSelected {
+       &:hover {background-color: $appDemo2Fucshia; color:$appDemo2White; border-color:darken($appDemo2Fucshia, 20%);}
+     }
+    }
+
+    .toothMap {
+      cursor: auto;
+      &:hover {background-color: #e0e0e0;}
+    }
+  }
+  // End Create Rx Form hack
+}
+
+
+
+// Need to Fit these in
+.orderHeader {
+	padding: 25px 25px;
+	border-bottom: 1px solid #EAEAEA;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.orderInfo {
+	border-bottom: 1px solid #EAEAEA;
+	padding: 25px 25px;
+}

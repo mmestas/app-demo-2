@@ -1,0 +1,240 @@
+//Variables - Buttons
+$btn-disabled-cursor: no-drop;
+
+// Mixin - Buttons
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  &:focus, &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+
+    &:hover, &:focus, &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+      border-color: darken($border, 25%);
+    }
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &:focus, &.focus, &:active, &.active {
+      background-color: $background;
+      border-color: $border;
+      cursor: $btn-disabled-cursor;
+    }
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// cursor: no-drop;
+@mixin bootstrap-button($background) {
+  $color: #fff;
+  $border: 5%;
+  @if (lightness($background) >= lightness(#aaa)) {
+    $color: #333;
+    $border: .2 * lightness($background);
+  }
+  @include button-variant($color, $background, darken($background, $border));
+}
+
+@mixin anchor-button($color) {
+  color: $color;
+}
+
+a:not([href]):not([tabindex]).btn {
+  @include anchor-button($appDemo2White);
+}
+// a:not([href]):not([tabindex]):not(.btn) {
+//   color: inherit;
+// }
+
+.btn-default    { @include bootstrap-button($appDemo2Teal); }
+.btn-primary    { @include bootstrap-button($appDemo2Teal); }
+.btn-secondary    { @include bootstrap-button($appDemo2MedGrey); }
+.btn-success    { @include bootstrap-button($appDemo2Green); }
+.btn-warning    { @include bootstrap-button($appDemo2Orange); }
+.btn-info    { @include bootstrap-button($appDemo2Teal); }
+
+.btn-outline-primary {color: $appDemo2Teal;border-color: $appDemo2Teal;
+  &:hover {background-color: $appDemo2Teal; border-color: $appDemo2Teal;color: $appDemo2White;}
+  &.hover {background-color: $appDemo2Teal; border-color: $appDemo2Teal;color: $appDemo2White;}
+  &:active {background-color: $appDemo2Teal; border-color: $appDemo2Teal;color: $appDemo2White;}
+  &.active {background-color: $appDemo2Teal; border-color: $appDemo2Teal;color: $appDemo2White;}
+}
+.btn-outline-secondary {color: $appDemo2LtGrey;border-color: $appDemo2LtGrey;
+  &:hover {background-color: $appDemo2LtGrey; border-color: $appDemo2LtGrey;color: $appDemo2White;}
+  &.hover {background-color: $appDemo2LtGrey; border-color: $appDemo2LtGrey;color: $appDemo2White;}
+  &:active {background-color: $appDemo2LtGrey; border-color: $appDemo2LtGrey;color: $appDemo2White;}
+  &.active {background-color: $appDemo2LtGrey; border-color: $appDemo2LtGrey;color: $appDemo2White;}
+}
+
+
+//From appDemo2Diagnostic Stylesheet - needs to be converted
+.btn.active, .btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+    color: $appDemo2White;
+    background-color: $appDemo2Teal;
+    border-color: $appDemo2Teal;
+    opacity:0.7;
+}
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    background-image: none;
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
+    margin-left: -1px;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    float: left;
+}
+.btn-group-vertical>.btn.active, .btn-group-vertical>.btn:active, .btn-group-vertical>.btn:focus, .btn-group-vertical>.btn:hover, .btn-group>.btn.active, .btn-group>.btn:active, .btn-group>.btn:focus, .btn-group>.btn:hover {
+    z-index: 2;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+// 12.12.18
+.btn {
+  // display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;
+  display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border-radius: 4px;
+  &.btn-xs {font-size: 12px; padding: 3px 7px; border-radius: 3px; line-height: 12px;}
+  &.btn-sm {font-size: 14px; padding: 6px 10px; border-radius: 3px; line-height: 14px;}
+  &.btn-md {font-size: 16px; padding: 6px 12px; border-radius: 3px; line-height: 16px;}
+  &.btn-lg {font-size: 16px; padding: 12px 18px; border-radius: 4px; line-height: 16px;}
+  // &.btn-lg {font-size: 1.25rem; padding: .5rem 1rem; border-radius: .3rem; line-height: 1.5;}
+  &.btn-xl {font-size: 14px; padding: 6px 10px; border-radius: 3px; line-height: 14px;}
+}
+
+button, .btn {overflow: visible;
+  // Button Colors - eventually depricate and move to bootstrap classes
+  &.teal {background: $appDemo2Teal; color:$appDemo2White;
+    &:hover {background: $appDemo2TealHover;}
+  }
+  &.green {background: $appDemo2Green; color:$appDemo2White;
+    &:hover {background: $appDemo2GreenHover;}
+  }
+  &.orange {background: $appDemo2Orange;color:$appDemo2White;
+    &:hover {background: $appDemo2OrangeHover;}
+  }
+  &.grey {background: $appDemo2MedGrey;color:$appDemo2White;
+    &:hover {background: $appDemo2MedLtGrey;}
+  }
+
+  &.active {outline: none;}
+  &:active {outline: none;}
+  &.focus {outline: none;}
+  &:focus {outline: none;}
+  &.hover {outline: none;}
+  &:hover {outline: none;}
+}
+
+i.fa {
+  &.teal {color: $appDemo2Teal;
+    &:hover {color: $appDemo2TealHover;}
+  }
+  &.green {color: $appDemo2Green;
+    &:hover {color: $appDemo2GreenHover;}
+  }
+  &.orange {color: $appDemo2Orange;
+    &:hover {color: $appDemo2OrangeHover;}
+  }
+  &.white {color: $appDemo2White;
+    &:hover {color: $appDemo2White;}
+  }
+
+  &.fa-sm {font-size: 15px;}
+  // &.fa-md {font-size: 15px;}
+  &.fa-lg {font-size: 25px;}
+}
+
+
+//Anchor Buttons
+a.teal {
+  background: $appDemo2Teal;
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  &:hover {background: $appDemo2TealHover;}
+}
+a.orange {
+  background: $appDemo2Orange;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+a.orange:hover {
+  background: #ffd07b;
+}
+
+button.fakeInput {
+  background: white;
+  border: 1px solid #eaeaea;
+  height: 45px;
+  color: #64656A;
+  text-align: left;
+  padding: 10px 10px;
+  min-width: 150px;
+  font-size:12px;
+  &:hover {
+    background: white;
+    border: 1px solid #eaeaea;
+    color: #64656A;
+  }
+}
